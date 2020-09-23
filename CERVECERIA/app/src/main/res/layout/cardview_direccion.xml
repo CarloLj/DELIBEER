@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cardView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="18dp">
+
+        <TextView
+            android:id="@+id/nombredestdir"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="Pedrito"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toTopOf="@+id/telefonodir"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/telefonodir"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="3322275374"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toTopOf="@+id/calledir"
+            app:layout_constraintStart_toStartOf="@+id/nombredestdir"
+            app:layout_constraintTop_toBottomOf="@+id/nombredestdir" />
+
+        <TextView
+            android:id="@+id/apellidodestdir"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="Fernandez"
+            android:textSize="24sp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/nombredestdir"
+            app:layout_constraintStart_toEndOf="@+id/nombredestdir" />
+
+
+        <TextView
+            android:id="@+id/calledir"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Santa Laura"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toTopOf="@+id/coloniadir"
+            app:layout_constraintStart_toStartOf="@+id/telefonodir"
+            app:layout_constraintTop_toBottomOf="@+id/telefonodir" />
+
+        <TextView
+            android:id="@+id/numeroextdir"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="#118"
+            android:textSize="20sp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/calledir"
+            app:layout_constraintStart_toEndOf="@+id/calledir" />
+
+
+        <TextView
+            android:id="@+id/numerointdir"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="5E"
+            android:textSize="16sp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/numeroextdir"
+            app:layout_constraintStart_toEndOf="@+id/numeroextdir" />
+
+        <TextView
+            android:id="@+id/coloniadir"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:text="Santa Margarita"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/calledir"
+            app:layout_constraintTop_toBottomOf="@+id/calledir" />
+
+        <TextView
+            android:id="@+id/codigopostaldir"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="45140"
+            android:textSize="16sp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/coloniadir"
+            app:layout_constraintStart_toEndOf="@+id/coloniadir" />
+
+        <ImageButton
+            android:id="@+id/editardir"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:backgroundTint="@color/HotPink"
+            android:src="@drawable/ic_editar"
+            android:clickable="false"
+            app:layout_constraintVertical_chainStyle="spread"
+            app:layout_constraintBottom_toTopOf="@+id/borrardir"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/borrardir"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:backgroundTint="@color/HotPink"
+            android:src="@drawable/ic_borrar"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/editardir"
+            app:layout_constraintStart_toStartOf="@+id/editardir"
+            app:layout_constraintTop_toBottomOf="@+id/editardir" />
+
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.v7.widget.CardView>

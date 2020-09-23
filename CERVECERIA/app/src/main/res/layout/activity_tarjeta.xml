@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.DireccionActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/IndianRed"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:layout_constraintTop_toTopOf="parent"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:titleTextColor="@color/primary_text">
+
+        <TextView
+            android:id="@+id/toolbar_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:text="Descripción de la tarjeta"
+            android:textColor="@color/primary_text"
+            android:textSize="24sp"/>
+
+    </android.support.v7.widget.Toolbar>
+
+    <ImageView
+        android:id="@+id/tar"
+        android:layout_width="128dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="32dp"
+        android:background="@color/White"
+        app:layout_constraintDimensionRatio="8:5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+    <TextView
+        android:id="@+id/nombretar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="Pedrito"
+        android:textSize="24sp"
+        app:layout_constraintStart_toEndOf="@+id/tar"
+        app:layout_constraintTop_toTopOf="@+id/tar" />
+
+    <TextView
+        android:id="@+id/numerotar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="numerotarjeta"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/fechatar"
+        app:layout_constraintStart_toStartOf="@+id/nombretar"
+        app:layout_constraintTop_toBottomOf="@+id/nombretar" />
+
+
+    <TextView
+        android:id="@+id/fechatar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="fechavencimiento"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/tar"
+        app:layout_constraintStart_toStartOf="@+id/numerotar"
+        app:layout_constraintTop_toBottomOf="@+id/numerotar" />
+
+</android.support.constraint.ConstraintLayout>

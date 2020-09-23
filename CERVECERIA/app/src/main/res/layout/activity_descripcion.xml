@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.DescripcionActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/IndianRed"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:layout_constraintTop_toTopOf="parent"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:titleTextColor="@color/primary_text">
+
+        <TextView
+            android:id="@+id/toolbar_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:text="Descripción del producto"
+            android:textColor="@color/primary_text"
+            android:textSize="24sp"/>
+
+    </android.support.v7.widget.Toolbar>
+
+    <ImageView
+        android:id="@+id/producto"
+        android:layout_width="0dp"
+        android:layout_height="196dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintDimensionRatio="5:7"
+        app:layout_constraintStart_toStartOf="@+id/concepto"
+        app:layout_constraintTop_toBottomOf="@+id/concepto" />
+
+    <TextView
+        android:id="@+id/concepto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="24dp"
+        android:text="concepto"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        tools:layout_editor_absoluteX="32dp" />
+
+    <TextView
+        android:id="@+id/marca"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:text="marca"
+        app:layout_constraintBottom_toTopOf="@+id/ml"
+        app:layout_constraintStart_toEndOf="@+id/producto"
+        app:layout_constraintTop_toTopOf="@+id/producto" />
+
+    <TextView
+        android:id="@+id/ml"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="ml"
+        app:layout_constraintBottom_toTopOf="@+id/tipo"
+        app:layout_constraintStart_toStartOf="@+id/marca"
+        app:layout_constraintTop_toBottomOf="@+id/marca" />
+
+    <TextView
+        android:id="@+id/preciolista"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:text="preciolista"
+        app:layout_constraintBottom_toTopOf="@+id/cantidad"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/producto" />
+
+    <TextView
+        android:id="@+id/cantidad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="cantidad"
+        app:layout_constraintBottom_toTopOf="@+id/cant"
+        app:layout_constraintEnd_toEndOf="@+id/agregarcarrito"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/agregarcarrito"
+        app:layout_constraintTop_toBottomOf="@+id/preciolista" />
+
+    <ImageButton
+        android:id="@+id/mas"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="8dp"
+        android:backgroundTint="@color/HotPink"
+        android:src="@drawable/ic_mas"
+        app:layout_constraintBottom_toBottomOf="@+id/cant"
+        app:layout_constraintEnd_toEndOf="@id/agregarcarrito"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/cant"
+        app:layout_constraintTop_toTopOf="@+id/cant"
+        app:layout_constraintVertical_bias="0.538" />
+
+    <ImageButton
+        android:id="@+id/menos"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_marginEnd="8dp"
+        android:backgroundTint="@color/HotPink"
+        android:src="@drawable/ic_menos"
+        app:layout_constraintBottom_toBottomOf="@+id/cant"
+        app:layout_constraintEnd_toStartOf="@+id/cant"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/ml"
+        app:layout_constraintStart_toStartOf="@+id/agregarcarrito"
+        app:layout_constraintTop_toTopOf="@+id/cant"
+        app:layout_constraintVertical_bias="0.538" />
+
+    <TextView
+        android:id="@+id/cant"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="1"
+        app:layout_constraintBottom_toTopOf="@+id/preciototal"
+        app:layout_constraintEnd_toStartOf="@+id/mas"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/menos"
+        app:layout_constraintTop_toBottomOf="@+id/cantidad" />
+
+    <TextView
+        android:id="@+id/preciototal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="preciototal"
+        app:layout_constraintBottom_toTopOf="@+id/agregarcarrito"
+        app:layout_constraintEnd_toEndOf="@+id/agregarcarrito"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/agregarcarrito"
+        app:layout_constraintTop_toBottomOf="@+id/cant" />
+
+    <TextView
+        android:id="@+id/sabor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="sabor"
+        app:layout_constraintBottom_toBottomOf="@id/producto"
+        app:layout_constraintStart_toStartOf="@+id/marca"
+        app:layout_constraintTop_toBottomOf="@+id/tipo" />
+
+    <TextView
+        android:id="@+id/tipo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="tipo"
+        app:layout_constraintBottom_toTopOf="@+id/sabor"
+        app:layout_constraintStart_toStartOf="@+id/marca"
+        app:layout_constraintTop_toBottomOf="@+id/ml" />
+
+    <TextView
+        android:id="@+id/descripcion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="descripcion"
+        app:layout_constraintStart_toStartOf="@+id/concepto"
+        app:layout_constraintTop_toBottomOf="@+id/producto" />
+
+    <Button
+        android:id="@+id/agregarcarrito"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:padding="12dp"
+        android:text="Agregar al&#10; carrito"
+        android:textAllCaps="false"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@id/producto"
+        app:layout_constraintEnd_toEndOf="@+id/preciolista"
+        app:layout_constraintStart_toStartOf="@+id/preciolista"
+        app:layout_constraintTop_toBottomOf="@+id/preciototal" />
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cardView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="18dp">
+
+        <ImageView
+            android:id="@+id/tar"
+            android:layout_width="128dp"
+            android:layout_height="0dp"
+            android:background="@color/White"
+            app:layout_constraintDimensionRatio="8:5"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/nombretar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:text="Pedrito"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toTopOf="@+id/tar"
+            app:layout_constraintStart_toEndOf="@+id/tar"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <TextView
+            android:id="@+id/numerotar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="numerotarjeta"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toTopOf="@+id/fechatar"
+            app:layout_constraintStart_toStartOf="@+id/nombretar"
+            app:layout_constraintTop_toBottomOf="@+id/nombretar" />
+
+
+        <TextView
+            android:id="@+id/fechatar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="fechavencimiento"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/numerotar"
+            app:layout_constraintTop_toBottomOf="@+id/numerotar" />
+
+        <ImageButton
+            android:id="@+id/editartar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:backgroundTint="@color/HotPink"
+            android:src="@drawable/ic_editar"
+            android:clickable="false"
+            app:layout_constraintVertical_chainStyle="spread"
+            app:layout_constraintBottom_toTopOf="@+id/borrartar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/borrartar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:backgroundTint="@color/HotPink"
+            android:src="@drawable/ic_borrar"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/editartar"
+            app:layout_constraintStart_toStartOf="@+id/editartar"
+            app:layout_constraintTop_toBottomOf="@+id/editartar" />
+
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.v7.widget.CardView>

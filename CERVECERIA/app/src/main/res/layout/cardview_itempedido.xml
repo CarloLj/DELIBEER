@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cardView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="14dp">
+
+        <ImageView
+            android:id="@+id/prodred2"
+            android:layout_width="0dp"
+            android:layout_height="64dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:background="@color/White"
+            app:layout_constraintBottom_toBottomOf="@+id/mlred2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/conceptored2"
+            app:layout_constraintDimensionRatio="5:7"/>
+
+        <TextView
+            android:id="@+id/conceptored2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="absolute vodka"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toTopOf="@+id/mlred2"
+            app:layout_constraintStart_toEndOf="@+id/prodred2"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <TextView
+            android:id="@+id/mlred2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="500ml"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toTopOf="@+id/cantidadred2"
+            app:layout_constraintStart_toEndOf="@+id/conceptored2"
+            app:layout_constraintStart_toStartOf="@+id/conceptored2"
+            app:layout_constraintTop_toBottomOf="@+id/conceptored2" />
+
+
+        <TextView
+            android:id="@+id/preciolistared2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:text="$10.00"
+            android:textSize="18sp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/mlred2"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            android:id="@+id/preciototalred2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="$10.00"
+            android:textSize="28sp"
+            app:layout_constraintEnd_toEndOf="@+id/preciolistared2"
+            app:layout_constraintTop_toBottomOf="@+id/preciolistared2" />
+
+
+        <TextView
+            android:id="@+id/cantred2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="1"
+            app:layout_constraintBaseline_toBaselineOf="@+id/cantidadred2"
+            app:layout_constraintStart_toEndOf="@+id/cantidadred2" />
+
+        <TextView
+            android:id="@+id/cantidadred2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp"
+            android:text="cantidad:"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/prodred2"
+            app:layout_constraintTop_toBottomOf="@+id/mlred2" />
+
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.v7.widget.CardView>

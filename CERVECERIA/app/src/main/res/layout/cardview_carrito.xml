@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cardView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="14dp">
+
+        <ImageView
+            android:id="@+id/prodred"
+            android:layout_width="0dp"
+            android:layout_height="64dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:background="@color/White"
+            app:layout_constraintBottom_toBottomOf="@+id/mlred"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/conceptored"
+            app:layout_constraintDimensionRatio="5:7"/>
+
+        <TextView
+            android:id="@+id/conceptored"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="absolute vodka"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toTopOf="@+id/mlred"
+            app:layout_constraintStart_toEndOf="@+id/prodred"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <TextView
+            android:id="@+id/mlred"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="500ml"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toTopOf="@+id/cantidadred"
+            app:layout_constraintStart_toEndOf="@+id/conceptored"
+            app:layout_constraintStart_toStartOf="@+id/conceptored"
+            app:layout_constraintTop_toBottomOf="@+id/conceptored" />
+
+        <TextView
+            android:id="@+id/preciolistared"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:text="$10.00"
+            android:textSize="18sp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/mlred"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            android:id="@+id/preciototalred"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="$10.00"
+            android:textSize="28sp"
+            app:layout_constraintEnd_toEndOf="@+id/preciolistared"
+            app:layout_constraintTop_toBottomOf="@+id/preciolistared" />
+
+
+        <ImageButton
+            android:id="@+id/borrarred"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="16dp"
+            android:backgroundTint="@color/HotPink"
+            android:src="@drawable/ic_borrar"
+            app:layout_constraintBottom_toBottomOf="@+id/masred"
+            app:layout_constraintStart_toEndOf="@+id/masred"
+            app:layout_constraintTop_toTopOf="@+id/masred" />
+
+        <ImageButton
+            android:id="@+id/menosred"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="16dp"
+            android:backgroundTint="@color/HotPink"
+            android:src="@drawable/ic_menos"
+            app:layout_constraintBottom_toBottomOf="@+id/cantred"
+            app:layout_constraintStart_toEndOf="@+id/cantidadred"
+            app:layout_constraintTop_toTopOf="@+id/cantred"
+            app:layout_constraintVertical_bias="0.538" />
+
+        <TextView
+            android:id="@+id/cantred"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1"
+            app:layout_constraintBaseline_toBaselineOf="@+id/cantidadred"
+            app:layout_constraintEnd_toStartOf="@+id/masred"
+            app:layout_constraintStart_toEndOf="@+id/menosred" />
+
+        <ImageButton
+            android:id="@+id/masred"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="40dp"
+            android:backgroundTint="@color/HotPink"
+            android:src="@drawable/ic_mas"
+            app:layout_constraintBottom_toBottomOf="@+id/menosred"
+            app:layout_constraintStart_toEndOf="@+id/menosred"
+            app:layout_constraintTop_toTopOf="@+id/menosred" />
+
+        <TextView
+            android:id="@+id/cantidadred"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp"
+            android:text="cantidad"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/prodred"
+            app:layout_constraintTop_toBottomOf="@+id/mlred" />
+
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.v7.widget.CardView>
